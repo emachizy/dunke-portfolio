@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import dunke_profile_img from "@/public/images/dunke-profile-img.png";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
+// import { FaLocationArrow } from "react-icons/fa6";
+// import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   const [showContact, setShowContact] = useState(false);
 
-  const handleClick = () => {
-    setShowContact(!showContact);
-  };
   return (
     <div className="pt-28 pb-20">
       <div>
@@ -58,10 +58,12 @@ const Hero = () => {
           <div className="relative mt-6">
             <MagicButton
               //   handleClick={handleClick}
-              icon={}
+
               title="Contact Me"
               showContact={showContact}
               setShowContact={setShowContact}
+              icon={<FaLocationArrow />}
+              position="right"
             />
 
             {showContact && (
@@ -79,7 +81,7 @@ const Hero = () => {
 
         {/* Image Section */}
         <div className="flex justify-center md:justify-end">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 md:rounded-full overflow-hidden shadow-lg ring-4 ring-purple-200">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg ring-4 ring-purple-200">
             <Image
               src={dunke_profile_img}
               alt="Profile photo"
