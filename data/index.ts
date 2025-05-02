@@ -8,19 +8,21 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    title: "Data Entry",
+    description:
+      "Accurate and efficient data entry services to help you organize, manage, and retrieve important information with ease.",
+    className: "lg:col-span-2 md:col-span-2 md:row-span-2  lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    title: "Content Writing",
+    description:
+      "Clear, engaging, and tailored content for emails, blogs, reports, or social media—crafted to suit your tone and audience.",
+    className: "lg:col-span-1 md:col-span-1 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
@@ -28,9 +30,10 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    title: " Personal Assistance",
+    description:
+      "Comprehensive day-to-day support including calendar management, travel arrangements, email filtering, and task prioritization.",
+    className: "lg:col-span-1 md:col-span-1 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -38,30 +41,33 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    title: "Book Keeping",
+    description:
+      "Meticulous financial tracking—managing invoices, expenses, and account reconciliations to keep your books in order.",
+    className: "lg:col-span-1 md:col-span-1 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/grid.svg",
+    img: "",
     spareImg: "/b4.svg",
   },
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
+    title: "Email & Calendar Management",
+    description:
+      "Stay organized and on schedule with expertly managed inboxes, appointments, and reminders.",
+    className: "md:col-span-1 md:row-span-1",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    img: "",
+    spareImg: "/book-keeping.jpg",
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    title: "Travel & Event Planning",
+    description:
+      "Flawless coordination of travel itineraries, bookings, and events—whether personal or business.",
+    className: "lg:col-span-2 md:col-span-2 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
@@ -69,8 +75,9 @@ export const gridItems = [
   },
   {
     id: 7,
-    title: "Do you want to start a project together?",
-    description: "",
+    title: "📞 Client Communication & Follow-Up",
+    description:
+      "Professional handling of client interactions—calls, emails, and follow-ups to maintain smooth, responsive communication.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",

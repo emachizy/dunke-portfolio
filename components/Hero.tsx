@@ -42,17 +42,16 @@ const Hero = () => {
         <div className="text-center md:text-left space-y-6">
           <TextGenerateEffect
             className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 leading-snug"
-            words="Crafting Modern Web Experiences"
+            words="Best Virtual Assistant For Your Business​"
           />
 
-          <h2 className="uppercase tracking-widest text-sm md:text-base text-purple-600 font-semibold">
-            Built with Next.js & Tailwind CSS
+          <h2 className="uppercase tracking-widest text-sm md:text-base text-purple-900 font-semibold">
+            Omodunke Deborah Oluwadare
           </h2>
 
           <TextGenerateEffect
             className="text-gray-700 text-base md:text-lg max-w-xl"
-            words="I build performant, responsive websites with sleek designs, scalable
-            architecture, and smooth user interactions."
+            words="Visionary, focused and hardworking individual, proficient in administration and management, also skilled in providing quality strategies and customer relations services."
           />
 
           <div className="relative mt-6">
