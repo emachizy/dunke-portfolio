@@ -30,12 +30,11 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: " Personal Assistance",
-    description:
-      "Comprehensive day-to-day support including calendar management, travel arrangements, email filtering, and task prioritization.",
+    title: "Skills",
+    description: "",
     className: "lg:col-span-1 md:col-span-1 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center",
+    titleClassName: "justify-center purple-500",
     img: "",
     spareImg: "",
   },

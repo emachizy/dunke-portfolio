@@ -14,6 +14,10 @@ import { FaLocationArrow } from "react-icons/fa6";
 const Hero = () => {
   const [showContact, setShowContact] = useState(false);
 
+  const handleToggle = () => {
+    setShowContact(!showContact);
+  };
+
   return (
     <div className="pt-28 pb-20">
       <div>
@@ -59,19 +63,16 @@ const Hero = () => {
               //   handleClick={handleClick}
 
               title="Contact Me"
-              showContact={showContact}
-              setShowContact={setShowContact}
+              // showContact={showContact}
+              handleClick={handleToggle}
               icon={<FaLocationArrow />}
               position="right"
             />
 
             {showContact && (
-              <div className="mt-4 md:absolute top-10 left-0 text-left text-gray-800 space-y-2 transition-all ">
+              <div className="mt-4 md:absolute top-10 left-0 text-left text-gray-800 space-y-2 transition-all bg-purple-500/75 inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none justify-center items-center px-2 shadow-2xl">
                 <p>
                   📞 <span className="select-all">+234 810 123 4567</span>
-                </p>
-                <p>
-                  📧 <span className="select-all">emmanuel@example.com</span>
                 </p>
               </div>
             )}

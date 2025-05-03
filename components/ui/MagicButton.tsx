@@ -1,24 +1,30 @@
 import React from "react";
 
 const MagicButton = ({
-  showContact,
-  setShowContact,
+  // showContact,
+  // setShowContact,
   title,
   icon,
   position,
-}: {
+  handleClick,
+}: // otherClasses,
+{
   title: string;
   icon: React.ReactNode;
   position: string;
-  handleClick?: () => void;
-  otherClasses?: string;
-  showContact: boolean;
-  setShowContact: (value: boolean) => void;
+  handleClick: () => void;
+  otherClasses: string;
+  // showContact: boolean;
+  // setShowContact: (value: boolean) => void;
 }) => {
   return (
     <div>
       <button
-        onClick={() => setShowContact(!showContact)}
+        onClick={() => {
+          if (handleClick) {
+            handleClick(); // Ensure handleClick is actually called
+          }
+        }}
         className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none "
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,#d046bb_50%,#eadee9_100%)]" />
