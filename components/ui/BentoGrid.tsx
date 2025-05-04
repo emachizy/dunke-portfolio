@@ -11,6 +11,7 @@ import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -94,24 +95,30 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento relative overflow-hidden shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border border-purple-500/[0.1] transition duration-200 hover:shadow-xl dark:border-white/[0.1] dark:bg-black dark:shadow-none ",
+        "group/bento relative overflow-hidden shadow-input row-span-1 flex flex-col justify-between space-y-4 h-auto rounded-3xl border border-purple-500/[0.1] transition shadow-2xl duration-200 hover:shadow-xl dark:border-white/[0.1] dark:bg-black dark:shadow-none ",
         className
       )}
-      style={{
-        backgroundColor: "#6d378a",
-        background:
-          " linear-gradient(90deg,rgba(109, 55, 138, 1) 0%, rgba(11, 2, 13, 1) 100%, rgba(251, 247, 252, 1) 51%)",
-      }}
+      // style={{
+      //   backgroundColor: "#fff",
+      //   background:
+      //     " linear-gradient(90deg,#765984 0%, #230829 100%, rgba(251, 247, 252, 1) 51%)",
+      // }}
+      id="about"
     >
       <div
-        className={`${id === 6 && "flex justify-center items-center"}h-full`}
+        className={`${
+          (id === 6 && "flex justify-center items-center") ||
+          (id === 7 && "flex justify-center items-center")
+        }h-full`}
       >
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover, object-center")}
+              width={100}
+              height={100}
             />
           )}
         </div>
@@ -122,13 +129,15 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               className={cn(
                 imgClassName,
                 "object-cover, object-center w-full h-full"
               )}
+              width={100}
+              height={100}
             />
           )}
         </div>
@@ -142,14 +151,20 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 z-50",
-            id == 2 && "text-white"
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 z-50"
           )}
         >
-          <div className="font-sans text-sm font-extralight text-gray-200 dark:text-white md:text-xs lg:text-base z-10">
+          <div className="font-sans text-sm font-extralight md:text-xs lg:text-base z-10">
             {description}
           </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+          <div
+            className={cn(
+              titleClassName,
+              "font-sans font-bold text-lg lg:text-3xl max-w-96 z-10",
+              id === 2 &&
+                "bg-purple-500/75 mr-auto px-2 rounded-b-2xl rounded-t-sm mt-1 py-1 shadow-2xl text-white"
+            )}
+          >
             {title}
           </div>
           {id === 2 && <GlobeDemo />}
@@ -201,7 +216,7 @@ export const BentoGridItem = ({
                 />
               </div>
               <MagicButton
-                title={copied ? "Email copied" : "Copy my email"}
+                title={copied ? "Email copied" : "Copy my email address"}
                 icon={<IoCopyOutline />}
                 position="left"
                 otherClasses="!bg-[#161a31]"

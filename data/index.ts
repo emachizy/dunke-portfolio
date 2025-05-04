@@ -1,6 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
+  { name: "Resume", link: "#resume" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
@@ -63,9 +63,8 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Travel & Event Planning",
-    description:
-      "Flawless coordination of travel itineraries, bookings, and events—whether personal or business.",
+    title: "Do you want to start a project together?",
+    description: "",
     className: "lg:col-span-2 md:col-span-2 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -74,9 +73,9 @@ export const gridItems = [
   },
   {
     id: 7,
-    title: "📞 Client Communication & Follow-Up",
+    title: "Travel & Event Planning",
     description:
-      "Professional handling of client interactions—calls, emails, and follow-ups to maintain smooth, responsive communication.",
+      "Flawless coordination of travel itineraries, bookings, and events—whether personal or business.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -88,35 +87,75 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "My Resume",
+    des: "With over 2 years experience in the field.",
+    img: "/p2.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://peach-caryn-96.tiiny.site",
+  },
+  // {
+  //   id: 2,
+  //   title: "Yoom - Video Conferencing App",
+  //   des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+  //   img: "/p2.svg",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+  //   link: "https://github.com/adrianhajdin/zoom-clone",
+  // },
+  // {
+  //   id: 3,
+  //   title: "AI Image SaaS - Canva Application",
+  //   des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+  //   img: "/p3.svg",
+  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+  //   link: "https://github.com/adrianhajdin/ai_saas_app",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Animated Apple Iphone 3D Website",
+  //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+  //   img: "/p4.svg",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+  //   link: "https://github.com/adrianhajdin/iphone",
+  // },
+];
+
+export const skills = [
+  {
+    id: 1,
+    title: "Hard Skills",
+    skills: [
+      "Microsoft Office tools",
+      "Google Suite tools",
+      "Data Entry",
+      "Computer Proficiency",
+      "Social Media Savvy",
+    ],
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Soft Skills",
+    skills: [
+      "Excellent Communication skill",
+      "Problem Solving",
+      "Time Management",
+      "Teamwork & Interpersonal skill",
+      "Leadership",
+      "Emotional Intelligence",
+      "Analytical skill",
+    ],
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Core Competencies",
+    skills: [
+      "Human Relations",
+      "Cash Management",
+      "Ability to Learn Fast",
+      "Behavioral Management",
+      "Project Management",
+      "Analytical Reasoning",
+      "Bookkeeping",
+    ],
   },
 ];
 

@@ -1,21 +1,16 @@
 import React from "react";
 
 const MagicButton = ({
-  // showContact,
-  // setShowContact,
   title,
   icon,
   position,
   handleClick,
-}: // otherClasses,
-{
+}: {
   title: string;
   icon: React.ReactNode;
   position: string;
   handleClick: () => void;
   otherClasses: string;
-  // showContact: boolean;
-  // setShowContact: (value: boolean) => void;
 }) => {
   return (
     <div>

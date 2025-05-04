@@ -33,7 +33,7 @@ export default function Grid() {
             imgClassName={imgClassName}
             titleClassName={titleClassName}
             spareImg={spareImg}
-            className={id === 4 || id === 7 ? "md:col-span-2" : ""}
+            className={id === 4 ? "md:col-span-2 " : ""}
           />
         )
       )}

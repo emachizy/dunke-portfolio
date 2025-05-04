@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/lib/utils";
@@ -12,12 +12,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 // import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
-  const [showContact, setShowContact] = useState(false);
-
-  const handleToggle = () => {
-    setShowContact(!showContact);
-  };
-
   return (
     <div className="pt-28 pb-20">
       <div>
@@ -58,25 +52,13 @@ const Hero = () => {
             words="Visionary, focused and hardworking individual, proficient in administration and management, also skilled in providing quality strategies and customer relations services."
           />
 
-          <div className="relative mt-6">
+          <a href="#about" className="relative mt-6">
             <MagicButton
-              //   handleClick={handleClick}
-
-              title="Contact Me"
-              // showContact={showContact}
-              handleClick={handleToggle}
+              title="Show my work"
               icon={<FaLocationArrow />}
               position="right"
             />
-
-            {showContact && (
-              <div className="mt-4 md:absolute top-10 left-0 text-left text-gray-800 space-y-2 transition-all bg-purple-500/75 inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none justify-center items-center px-2 shadow-2xl">
-                <p>
-                  📞 <span className="select-all">+234 810 123 4567</span>
-                </p>
-              </div>
-            )}
-          </div>
+          </a>
         </div>
 
         {/* Image Section */}
