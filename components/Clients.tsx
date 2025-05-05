@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatedTestimonials } from "@/components/ui/AnimatedTestimonials";
 import { companies } from "@/data";
 
@@ -40,7 +42,7 @@ export function Clients() {
     },
   ];
   return (
-    <section id="testimonials">
+    <section id="testimonials" className="px-4 overflow-x-hidden">
       <div className="max-w-lg mx-auto md:mt-10">
         <p className="text-purple-500 text-xs text-center">Testimonials</p>
         <h1 className="heading capitalize">
@@ -48,15 +50,15 @@ export function Clients() {
           <span className="text-purple-500">Satisfied Customers</span>
         </h1>
       </div>
-      <AnimatedTestimonials testimonials={testimonials} />;
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
+      <AnimatedTestimonials testimonials={testimonials} />
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-8">
         {companies.map(({ id, img, name, nameImg }) => (
-          <div key={id} className="flex md:max-w-60 max-w-32 gap-2">
-            <img src={img} alt={name} className="md:w-10 w-5" />
-            {/* <img src={nameImg} alt={name} className="md:w-24 w-20 text-black" /> */}
-            <p className="flex justify-center items-center text-xl">
-              {nameImg}
-            </p>
+          <div
+            key={id}
+            className="flex items-center gap-2 max-w-[140px] md:max-w-60"
+          >
+            <img src={img} alt={name} className="w-5 h-5 md:w-10 md:h-10" />
+            <p className="text-xs md:text-lg">{nameImg}</p>
           </div>
         ))}
       </div>

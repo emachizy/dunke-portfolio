@@ -29,7 +29,9 @@ export default function RootLayout({
   // }, []);
   return (
     <html lang="en">
-      <body className={`${inter.className} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${inter.className} ${geistMono.variable} antialiased overflow-x-hidden`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

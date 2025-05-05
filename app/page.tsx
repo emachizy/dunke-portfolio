@@ -17,7 +17,7 @@ import { navItems } from "@/data";
 
 export default function Home() {
   return (
-    <main className="relative flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
       <div className="fixed top-1/2 right-0 z-10">
         <ModeToggle />
       </div>

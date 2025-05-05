@@ -8,7 +8,7 @@ const Experience = () => {
     <div>
       <div className="py-20" id="experience">
         <div className="max-w-sm mx-auto">
-          <p className="text-purple-500 text-xs text-center">Resume</p>
+          <p className="text-purple-500 text-xs text-center">Experience</p>
           <h1 className="heading capitalize">
             my work <span className="text-purple-500">Experience</span>
           </h1>

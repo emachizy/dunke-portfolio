@@ -195,34 +195,34 @@ export const testimonials = [
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
+    name: "Dubril Oil",
     img: "/dubril-logo.jpg",
     nameImg: "Dubril Oil",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    name: "Atlantic Oil",
+    img: "/Atlantic-logo.png",
+    nameImg: "Atlantic Oil",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    name: "The Big Bottling Company",
+    img: "/Big-Bottling-Company-Logo.png",
+    nameImg: "BBC",
   },
   {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    name: "Emeka Uzodinma Chartered Accountants & Co.",
+    img: "/euc-logo.png",
+    nameImg: "EUC",
   },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
+  // {
+  //   id: 5,
+  //   name: "docker.",
+  //   img: "/dock.svg",
+  //   nameImg: "/dockerName.svg",
+  // },
 ];
 
 export const workExperience = [
@@ -277,14 +277,14 @@ export const approach = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/linkedin-logo.svg",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/instagram-logo-gif.gif",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/facebook-logo.svg",
   },
 ];
