@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
+import { IconBadge, IconCheck, IconFolder } from "@tabler/icons-react";
 
 const CheckIcon = ({ className }: { className?: string }) => {
   return (
@@ -60,30 +61,41 @@ const LoaderCore = ({
               "text-left flex items-start gap-2 mb-3",
               loadingState.isHeader && "mt-6"
             )}
-            initial={{ opacity: 0, y: -(value * 40) }}
-            animate={{ opacity: opacity, y: -(value * 40) }}
+            initial={{
+              opacity: 0,
+              y: -(value * 40),
+              scale: loadingState.isHeader ? 0.95 : 1,
+            }}
+            animate={{
+              opacity: opacity,
+              y: -(value * 40),
+              scale: 1,
+            }}
             transition={{ duration: 0.5 }}
           >
             <div className="pt-1">
-              {!loadingState.isHeader &&
-                (index > value ? (
-                  <CheckIcon className="text-black dark:text-white" />
-                ) : (
-                  <CheckFilled
-                    className={cn(
-                      "text-black dark:text-white",
-                      value === index &&
-                        "text-black dark:text-[#765984] opacity-100"
-                    )}
-                  />
-                ))}
+              {loadingState.isHeader ? (
+                <IconBadge className="text-purple-900 dark:text-white" />
+              ) : index > value ? (
+                <CheckIcon className="text-black dark:text-white" />
+              ) : (
+                <CheckFilled
+                  className={cn(
+                    "text-black dark:text-lime-500",
+                    value === index &&
+                      "text-black dark:text-[#765984] opacity-100"
+                  )}
+                />
+              )}
             </div>
             <span
               className={cn(
                 "text-black dark:text-white",
                 loadingState.isHeader &&
-                  "font-semibold text-xl underline decoration-dotted",
-                value === index && "text-black dark:text-[#765984] opacity-100"
+                  "font-semibold text-lg tracking-wide text-purple-500 dark:text-purple-500",
+                value === index &&
+                  !loadingState.isHeader &&
+                  "text-black dark:text-[#765984] opacity-100"
               )}
             >
               {loadingState.text}
@@ -98,7 +110,7 @@ const LoaderCore = ({
 export const MultiStepLoader = ({
   loadingStates,
   loading,
-  duration = 2000,
+  duration = 1000,
   loop = true,
 }: {
   loadingStates: LoadingState[];

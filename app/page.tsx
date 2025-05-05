@@ -17,7 +17,7 @@ export default function Home() {
         <ModeToggle />
       </div>
 
-      <div className="max-w-7xl w-full">
+      <div className="max-w-7xl w-full ">
         <FloatingNav navItems={navItems} className="" />
         <Hero />
         <Grid />

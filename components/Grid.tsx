@@ -12,7 +12,7 @@ import { gridItems } from "@/data";
 
 export default function Grid() {
   return (
-    <BentoGrid>
+    <BentoGrid className="md:max-w-6xl mx-auto">
       {gridItems.map(
         ({
           className,

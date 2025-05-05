@@ -7,9 +7,12 @@ import { FaLocationArrow } from "react-icons/fa6";
 const RecentProjects = () => {
   return (
     <div className="py-20" id="resume">
-      <h1 className="heading capitalize">
-        Take a look at <span className="text-[#765984]">my Resume</span>
-      </h1>
+      <div className="max-w-sm mx-auto">
+        <p className="text-purple-500 text-xs text-center">Resume</p>
+        <h1 className="heading capitalize">
+          Take a look at <span className="text-purple-500">my Resume</span>
+        </h1>
+      </div>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map(({ id, title, des, link, img }) => (
           <div
