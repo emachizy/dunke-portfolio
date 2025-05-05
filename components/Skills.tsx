@@ -8,10 +8,12 @@ export function Skills() {
   const [activeLoader, setActiveLoader] = useState<number | null>(null);
 
   return (
-    <div className="w-full min-h-screen py-12 flex flex-col items-center gap-12">
+    <div className="w-full min-h-screen md:py-12 flex flex-col items-center gap-12">
       <div className="max-w-sm mx-auto">
         <p className="text-purple-500 text-xs text-center ">skills</p>
-        <h1 className="heading ">Valuable Skills I Bring</h1>
+        <h1 className="heading ">
+          Valuable Skills <span className="text-purple-500">I Bring</span>{" "}
+        </h1>
       </div>
       {skills.map((category, index) => {
         const loadingStates = category.skills.map((skill) => ({
@@ -28,7 +30,7 @@ export function Skills() {
             {/* Trigger button */}
             <button
               onClick={() => setActiveLoader(index)}
-              className="bg-purple-500 hover:bg-[#fff]/90 hover:text-purple-500 hover:shadow-2xl mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-lg px-8 flex items-center justify-center shadow-2xl hover:translate-x-2"
+              className="bg-slate-900/[0.8] hover:bg-[#fff]/90 hover:text-purple-500 hover:shadow-2xl mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-lg px-8 flex items-center justify-center shadow-2xl hover:translate-x-2"
               style={{
                 boxShadow:
                   "0px -1px 0px 0px #ffffff40 inset, 0px 1px 0px 0px #ffffff40 inset",
@@ -42,7 +44,7 @@ export function Skills() {
               loadingStates={loadingStates}
               loading={activeLoader === index}
               duration={1500}
-              loop={false}
+              loop={true}
             />
 
             {/* Close Button */}
