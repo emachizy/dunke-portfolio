@@ -256,6 +256,24 @@ export const workExperience = [
   },
 ];
 
+export const approach = [
+  {
+    id: 1,
+    title: "Systems Optimization",
+    desc: "I streamline your tools, workflows, and routines—eliminating friction, reducing manual tasks, and boosting your daily efficiency through automation and smart system setups.",
+  },
+  {
+    id: 2,
+    title: "Proactive Communication",
+    desc: "I stay one step ahead by anticipating needs, sending timely reminders, and organizing priorities—helping you stay focused, on track, and stress-free.",
+  },
+  {
+    id: 3,
+    title: "Strategic Initiative",
+    desc: "Beyond execution, I contribute ideas, spot inefficiencies, and suggest improvements—supporting your growth with insight-driven assistance.",
+  },
+];
+
 export const socialMedia = [
   {
     id: 1,
