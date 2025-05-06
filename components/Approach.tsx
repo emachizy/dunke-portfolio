@@ -2,7 +2,7 @@
 import React from "react";
 
 import { AnimatePresence, motion } from "motion/react";
-import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+import { CanvasRevealEffect } from "@/components/ui/CanvaRevealEffect";
 
 const Approach = () => {
   return (
