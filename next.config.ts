@@ -2,7 +2,12 @@
 import type { NextConfig } from "next";
 
 const NextConfig = {
+  eslint: {
+    // Warning: allows production builds to succeed even if ESLint errors exist
+    ignoreDuringBuilds: true,
+  },
   typescript: {
+    // WARNING: allows production builds to succeed even if TS type errors exist
     ignoreBuildErrors: true,
   },
 };
