@@ -281,7 +281,7 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/instagram-logo-gif.gif",
+    img: "/instagram-logo-gif.g",
   },
   {
     id: 3,

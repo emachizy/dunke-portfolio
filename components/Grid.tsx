@@ -15,7 +15,6 @@ export default function Grid() {
     <BentoGrid className="md:max-w-6xl mx-auto gap-10 md:gap-6">
       {gridItems.map(
         ({
-          className,
           title,
           description,
           img,

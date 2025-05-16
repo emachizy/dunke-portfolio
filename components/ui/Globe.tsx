@@ -60,7 +60,7 @@ interface WorldProps {
   data: Position[];
 }
 
-let numbersOfRings = [0];
+const numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
@@ -130,6 +130,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         color: arc.color,
         lat: arc.startLat,
         lng: arc.startLng,
+        rgb,
       });
       points.push({
         size: defaultProps.pointSize,
