@@ -50,7 +50,7 @@ export function Clients() {
           <span className="text-purple-500">Satisfied Customers</span>
         </h1>
       </div>
-      <AnimatedTestimonials testimonials={testimonials} />
+      <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-8">
         {companies.map(({ id, img, name, nameImg }) => (
           <div

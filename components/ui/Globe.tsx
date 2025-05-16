@@ -60,7 +60,11 @@ interface WorldProps {
   data: Position[];
 }
 
+<<<<<<< HEAD
 const numbersOfRings = [0];
+=======
+// let numbersOfRings = [0];
+>>>>>>> 5093bf2160c65cf60ccb079ea1f95d347244662e
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
@@ -123,7 +127,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     const points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+      // const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,

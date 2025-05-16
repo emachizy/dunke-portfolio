@@ -68,7 +68,11 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
+<<<<<<< HEAD
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
+=======
+            <span className="text-sm">{navItem.name}</span>
+>>>>>>> 5093bf2160c65cf60ccb079ea1f95d347244662e
           </a>
         ))}
         {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
