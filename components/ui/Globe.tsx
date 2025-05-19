@@ -72,8 +72,6 @@ interface PointData {
   rgb?: { r: number; g: number; b: number } | null;
 }
 
-interface ArcData extends Position {}
-
 interface RingData {
   lat: number;
   lng: number;
@@ -142,7 +140,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   useEffect(() => {
     if (!globeRef.current || !isInitialized || !data) return;
 
-    const arcs: ArcData[] = data;
+    const arcs: Position[] = data; // Using Position directly
     const points: PointData[] = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
@@ -189,11 +187,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng((d) => d.startLng)
       .arcEndLat((d) => d.endLat)
       .arcEndLng((d) => d.endLng)
-      .arcColor((e) => (e as ArcData).color)
-      .arcAltitude((e) => (e as ArcData).arcAlt)
+      .arcColor((e) => (e as Position).color) // Using Position
+      .arcAltitude((e) => (e as Position).arcAlt) // Using Position
       .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
       .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as ArcData).order)
+      .arcDashInitialGap((e) => (e as Position).order) // Using Position
       .arcDashGap(15)
       .arcDashAnimateTime(() => defaultProps.arcTime);
 
