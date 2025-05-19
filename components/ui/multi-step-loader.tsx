@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
-import { IconBadge, IconCheck, IconFolder } from "@tabler/icons-react";
+import { IconBadge } from "@tabler/icons-react";
 
 const CheckIcon = ({ className }: { className?: string }) => {
   return (

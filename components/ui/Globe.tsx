@@ -61,7 +61,7 @@ interface WorldProps {
   data: Position[];
 }
 
-const numbersOfRings: number[] = [0];
+// const numbersOfRings: number[] = [0];
 
 interface PointData {
   size: number | undefined;
