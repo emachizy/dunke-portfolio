@@ -20,6 +20,7 @@ export const AnimatedTestimonials = ({
   autoplay?: boolean;
 }) => {
   const [active, setActive] = useState(0);
+  const [rotateMap, setRotateMap] = useState<number[]>([]);
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -45,10 +46,12 @@ export const AnimatedTestimonials = ({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const rotateMap = useMemo(
-    () => testimonials.map(() => Math.floor(Math.random() * 21) - 10),
-    [testimonials]
-  );
+  useEffect(() => {
+    const initialRotations = testimonials.map(
+      () => Math.floor(Math.random() * 21) - 10
+    );
+    setRotateMap(initialRotations);
+  }, [testimonials]);
 
   const handlers = useSwipeable({
     onSwipedLeft: handleNext,

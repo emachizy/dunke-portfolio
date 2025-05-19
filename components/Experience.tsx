@@ -1,9 +1,19 @@
+"use client";
 import { workExperience } from "@/data";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "./ui/MovingBorders";
 // import { Button } from "./ui/button";
 
 const Experience = () => {
+  const [durations, setDurations] = useState<number[]>([]);
+
+  useEffect(() => {
+    const generatedDurations = workExperience.map(
+      () => Math.floor(Math.random() * 10000) + 1000
+    );
+    setDurations(generatedDurations);
+  }, []);
+
   return (
     <div>
       <div className="py-20" id="experience">
@@ -14,9 +24,9 @@ const Experience = () => {
           </h1>
         </div>
         <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-          {workExperience.map((card) => (
+          {workExperience.map((card, index) => (
             <Button
-              duration={Math.floor(Math.random() * 10000) + 1000}
+              duration={durations[index]}
               key={card.id}
               borderRadius="1.75rem"
               className="flex-1 text-white border-neutral-200 dark:border-slate-200"
