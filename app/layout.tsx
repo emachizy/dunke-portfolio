@@ -24,9 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // useEffect(() => {
-  //   document.documentElement.setAttribute("class", "light");
-  // }, []);
   return (
     <html lang="en">
       <body
@@ -34,7 +31,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="system" // Pass defaultTheme down
           enableSystem
           disableTransitionOnChange
         >

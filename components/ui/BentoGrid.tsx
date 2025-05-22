@@ -84,7 +84,8 @@ export const BentoGridItem = ({
       document.execCommand("copy");
       setCopied(true);
     } catch (err) {
-      console.error(err);
+      console.error("Fallback copy failed", err);
+
       alert("Copy failed. Please copy the email manually.");
     }
 

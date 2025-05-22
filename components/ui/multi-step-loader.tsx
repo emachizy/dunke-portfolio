@@ -61,16 +61,8 @@ const LoaderCore = ({
               "text-left flex items-start gap-2 mb-3",
               loadingState.isHeader && "mt-6"
             )}
-            initial={{
-              opacity: 0,
-              y: -(value * 40),
-              scale: loadingState.isHeader ? 0.95 : 1,
-            }}
-            animate={{
-              opacity: opacity,
-              y: -(value * 40),
-              scale: 1,
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: opacity }}
             transition={{ duration: 0.5 }}
           >
             <div className="pt-1">

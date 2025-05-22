@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 
-import { AnimatePresence, motion } from "motion/react";
-import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+import { AnimatePresence, motion } from "framer-motion";
+import { CanvasRevealEffect } from "@/components/ui/CanvaRevealEffect";
 
 const Approach = () => {
   return (
