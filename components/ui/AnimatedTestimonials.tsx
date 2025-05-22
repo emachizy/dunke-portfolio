@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSwipeable } from "react-swipeable";
 
 export type Testimonial = {
@@ -22,21 +23,24 @@ export const AnimatedTestimonials = ({
   const [active, setActive] = useState(0);
   const [rotateMap, setRotateMap] = useState<number[]>([]);
 
-  const handleNext = () => {
+  // Use useCallback to memoize these functions so they don't change on every render
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
+  // Autoplay effect
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
 
+  // Keyboard navigation effect
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") handleNext();
@@ -44,8 +48,9 @@ export const AnimatedTestimonials = ({
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [handleNext, handlePrev]);
 
+  // Initialize rotation map
   useEffect(() => {
     const initialRotations = testimonials.map(
       () => Math.floor(Math.random() * 21) - 10
@@ -93,13 +98,14 @@ export const AnimatedTestimonials = ({
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="absolute inset-0 origin-bottom"
               >
-                <img
-                  src={testimonial.src}
+                <Image
+                  src={testimonial.src || "/placeholder.svg"}
                   alt={`${testimonial.name} - ${testimonial.designation}`}
                   width={500}
                   height={500}
                   draggable={false}
                   className="h-full w-full rounded-3xl object-cover object-center"
+                  priority={index === active}
                 />
               </motion.div>
             ))}

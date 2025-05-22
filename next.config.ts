@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
+  images: {
+    domains: ["images.unsplash.com"],
+  },
   //
   // =======
   // module.exports = NextConfig;
