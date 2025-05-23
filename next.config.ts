@@ -51,3 +51,14 @@ const nextConfig: NextConfig = {
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/en", // If using internationalized routing
+      },
+    ];
+  },
+};
